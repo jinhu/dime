@@ -1,5 +1,40 @@
 class UsersController < ApplicationController
-  # GET /users
+	respond_to :html, :json
+   def start
+    @user=User.find(params[:id])
+  end
+  
+  def enter
+    if(cookies[:user_id])
+      @user=User.find(cookies[:user_id])
+      render :action=>:start ,:id=>cookies[:user_id]
+    elsif(!params[:user])
+        @user=User.new
+    else
+      @user=User.find_by_email(params[:user][:email])
+      if @user
+        cookies[:user_id]="#{@user.id}"
+       else
+        @error_msg="enter an valid email address"
+        @user=User.new
+      end
+    end  
+            respond_with(@user) 
+
+  end
+
+  def login
+    @user=User.new
+  end
+  
+  def logout
+    @user=User.new
+    cookies[:user_id]=nil
+    render :action=>:login
+  end
+  
+
+ # GET /users
   # GET /users.xml
   def index
     @users = User.all

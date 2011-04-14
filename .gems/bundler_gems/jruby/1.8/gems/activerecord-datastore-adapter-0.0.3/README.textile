@@ -1,0 +1,39 @@
+h1. Datastore Adapter
+
+ActiveRecord Adatper for AppEngine Datastore. The AppEngine Datastore is not a relational database system. So, this adapter only support some basic features. 
+
+h2. Installation
+
+Use appengine-sdk (1.4.0)
+
+Create Rails 3 application:
+
+bc. gem install rails --version=3.0.6
+rails new app_name -m http://siddick.github.com/datastore/rails3.rb
+cd app_name
+appcfg.rb run bin/rails g scaffold post title:string content:text  
+appcfg.rb run bin/rake db:migrate
+
+Run the server:
+
+bc. dev_appserver.rb .
+
+h2. Supported Features
+
+# has_many and belongs_to
+# migration
+# table indexes
+# operators( =, >, >=, <=, <>, in, and )
+
+h2. Not Supported
+
+Datastore is not a Relational Database system. So, you can't expect more.
+
+# Joins
+# operators( or, between, like, etc )
+
+h2. Bugs
+
+Please report the bugs.
+
+https://github.com/siddick/datastore/issues

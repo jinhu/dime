@@ -1,0 +1,8 @@
+pkg/*
+*.gem
+.bundle
+*.sqlite3
+database.yml
+indexs.yml
+*.log
+WEB-INF

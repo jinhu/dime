@@ -1,0 +1,27 @@
+<h1>Listing badges</h1>
+
+<table>
+  <tr>
+    <th>Game</th>
+    <th>Name</th>
+    <th>Image</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @badges.each do |badge| %>
+  <tr>
+    <td><%= badge.game_id %></td>
+    <td><%= badge.name %></td>
+    <td><%= badge.image %></td>
+    <td><%= link_to 'Show', badge %></td>
+    <td><%= link_to 'Edit', edit_badge_path(badge) %></td>
+    <td><%= link_to 'Destroy', badge, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Badge', new_badge_path %>

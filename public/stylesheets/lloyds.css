@@ -1,0 +1,254 @@
+
+div.tile {
+	float: left;
+	width: 80px;
+	height: 80px;
+	margin-bottom: 8px;
+	font-size: 10px;
+	text-align: center;
+  color: rgb(76, 86, 108);
+}
+
+div.tile .image {
+	width: 57px;
+	height: 57px;
+	border: 2px solid #B4B4B4;
+	-webkit-border-radius: 8px;
+	margin: 11px 11px 2px 10px;
+}
+
+div.tile div.badge {
+	float: right;
+	color: #ffffff;
+	font-size: 16px;
+	font-weight: bold;
+    text-align: center;
+	padding: 0px 5px 0px 5px;
+	-webkit-border-radius: 11px;
+	border: 3px solid #ffffff;
+	background: -webkit-gradient(linear, 0% 100%, 0% 0%, from(rgba(220,0,11,1)), to(rgba(255,168,172,1)));
+	-webkit-box-shadow: -2px 4px 2px #444;
+}
+
+.med_text_1{
+border-bottom:1px solid #C5DBF7;
+border-left:1px solid #C5DBF7;
+color:#333333;
+font-family:Verdana,sans-serif;
+font-size:11px;
+padding:5px 4px;
+border-collapse:separate;
+text-align:left;
+direction:ltr;
+color:#3B4164;
+font-family:Verdana,Arial,Helvetica,Geneva,sans-serif;
+background-color:#FFFFFF;
+}
+
+.med_text_2{
+border-bottom:1px solid #C5DBF7;
+border-left:1px solid #C5DBF7;
+color:#333333;
+font-family:Verdana,sans-serif;
+font-size:11px;
+padding:5px 4px;
+border-collapse:separate;
+text-align:left;
+direction:ltr;
+color:#3B4164;
+font-family:Verdana,Arial,Helvetica,Geneva,sans-serif;
+background-color:#E6F2FF;
+}
+
+.med_header, .med-header{
+background-color:#555555;
+text-align:left;
+border-collapse:separate;
+direction:ltr;
+color:#FFFFFF;
+font-family:Verdana,Arial,Helvetica,Geneva,sans-serif;
+font-size:14px;
+}
+body {
+  font-family: Verdana, Arial, Helvetica, Geneva, sans-serif;
+  color: #3B4164;
+  font-size: 75%; 
+ 	background-color:#F0F0F2;
+  margin: 0px;
+}
+#p-header{
+background-color:white;
+width:100%;
+}
+
+#tools {
+	
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	padding-left: 317px;
+	overflow: hidden;
+	background-color:white;
+	
+}
+#p-header ul {
+	overflow: hidden;
+	margin-top: 4px;
+}
+#p-header ul li {
+	float: left;
+	margin-right: 22px;
+	margin-left: 12px;
+	display:  block;
+}
+
+#p-navigator {
+	width: 250px;
+	float: top;
+	vertical-align:top;
+}
+#p-content {
+	float: top;
+	vertical-align:top;
+}
+
+img {
+border:0px none;
+}
+
+/* 1b. Styles related to body */
+#p-body {
+	background: url("/images/header_bg_tile.gif") repeat-x left top;
+	padding-top:0px;
+	width:100%;
+}
+#p-body-wrapper{
+	width:986px;
+	background: url("/images/body_outerwrapper_bg_tile.gif") repeat-y left top;
+	margin:auto;
+	text-align:left;
+}
+
+#p-body-innerwrapper{
+	background: url("/images/body_innerwrapper_bg.gif") no-repeat left top;
+	width:960px; 
+	padding:11px 13px 0px 13px;
+}
+
+#p-body-content {
+	width:960px;
+	text-align:left;
+
+}
+
+#p-body-bottomwrapper {
+	background:#EDEEF0 url("/images/body_bottomwrapper_bg.gif") no-repeat left top;
+	height:15px;
+	margin:0px;
+	width:986px;
+}
+
+#p-nav-wrapper{
+	width:246px;
+	background: url("/images/nav_outerwrapper_bg_tile.gif") repeat-y left top;
+	margin:auto;
+	text-align:left;
+	
+}
+
+#p-nav-innerwrapper{
+	background: url("/images/nav_innerwrapper_bg.gif") no-repeat left top;
+	width:220px; 
+	padding:11px 13px 0px 13px;
+}
+
+#p-nav-content {
+	width:220px;
+	text-align:left;
+}
+
+#p-nav-bottomwrapper {
+	background:#EDEEF0 url("/images/nav_bottomwrapper_bg.gif") no-repeat left top;
+	height:15px;
+	margin:0px;
+	width:246px;
+}
+
+/* 1c. Styles related to footer */
+
+#p-footer-wrapper{
+	width:960px;
+	text-align:left;
+	margin:auto;
+	position:relative;
+}
+
+table#p-footertable{
+	width:100%;
+	color:#888B9C;
+	font-size:90%;
+	border-collapse:collapse;
+	border-spacing:0px;
+}
+
+table#p-footertable td{
+	vertical-align:top;
+	background-color:transparent;
+}
+
+div#test-accordion{
+	border: 1px solid #CCCCEE;
+	background-color: #DDDDFF;
+}
+#personal-healthcare
+{
+	height:400px;
+	z-index: 10;		/* required for effect */
+	background:url(../images/pershealth.jpg) no-repeat;
+	#background-position: bottom;
+	cursor: pointer;
+	margin-bottom: 1px;
+	padding: 9px 14px 6px 14px;
+	border-top: 1px solid #5d5852;
+	vertical-align:center;
+
+	font-weight:bold;	
+}
+div.accordion {
+	position: relative; /* required for bounding */
+	width: 200px;
+}
+
+div.accordion-toggle{
+	background-color: #555;
+	text-align: left;
+	vertical-align:center;
+	position: relative; /* required for effect */
+	z-index: 10;		/* required for effect */
+	#background:url(../images/off.jpg) repeat-x;
+	#background-position: bottom;
+	color: #fff;   
+	cursor: pointer;
+	margin-bottom: 1px;
+	padding: 9px 14px 6px 14px;
+	border-top: 1px solid #5d5852;
+	font-weight:bold;	
+}
+
+div.accordion-toggle:hover, div.accordion-toggle-active{
+background-color: #000;
+color: #ff8;
+#	background-image: url(../images/on.jpg);
+	border-top: 1px solid #a06b55;
+}
+
+div.accordion-content{
+	overflow: hidden;	/* required for effect */
+	background-color: #E6F2FF;
+	padding: 0;
+	color: #222222;
+}
+
+div.accordion-content p{
+	margin: 9px 24px 6px 24px;
+}

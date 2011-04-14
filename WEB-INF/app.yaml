@@ -1,0 +1,3 @@
+application: dime2rescue
+version: 1
+runtime: jruby

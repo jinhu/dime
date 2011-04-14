@@ -1,0 +1,30 @@
+.active-scaffold .view {
+	width:90%;
+	background-color: #e6f2ff;
+	padding: 4px;
+	border: solid 1px #003366;
+}
+.active-scaffold h4,.active-scaffold h5 {
+color:#1F007F;
+}
+
+.active-scaffold-header h2 {
+color:#555555;
+font-family:arial,sans-serif;
+font-size:160%;
+font-size-adjust:none;
+font-stretch:normal;
+font-style:normal;
+font-variant:normal;
+font-weight:bold;
+line-height:normal;
+margin:0pt;
+padding:2px 0px;
+}
+.active-scaffold-header div.actions {
+width:65%;
+position:absolute;
+right:5px;
+text-align:right;
+top:5px;
+}

@@ -1,239 +1,346 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
-  <head>
-    <title>Ruby on Rails: Welcome aboard</title>
-    <style type="text/css" media="screen">
-      body {
-        margin: 0;
-        margin-bottom: 25px;
-        padding: 0;
-        background-color: #f0f0f0;
-        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
-        font-size: 13px;
-        color: #333;
-      }
+	<head><meta charset="UTF-8" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
 
-      h1 {
-        font-size: 28px;
-        color: #000;
-      }
+		<title>iMeThaMan</title>
+		<link rel="stylesheet" type="text/css" href="/stylesheets/jqtouch.css" />
+		<link rel="stylesheet" type="text/css" href="/stylesheets/methaman.iphone.css" />
+		<link rel="stylesheet" type="text/css" href="/stylesheets/methaman.iphone.extension.css" />
 
-      a  {color: #03c}
-      a:hover {
-        background-color: #03c;
-        color: white;
-        text-decoration: none;
-      }
+		<script src="/javascripts/jquery.js" type="text/javascript" charset="utf-8">
+		</script>
+		<script src="/javascripts/jqtouch.js" type="application/javascript" charset="utf-8">
+		</script>
+		<script src="/javascripts/extensions/jquery.flot.js" type="application/javascript" charset="utf-8">
+		</script>
+		<script src="/javascripts/extensions/jquery.flot.threshold.js" type="application/javascript" charset="utf-8">
+		</script>
+		<script src="/javascripts/extensions/jplottouch.js" type="application/javascript" charset="utf-8">
+		</script>
+		<script src="/javascripts/canvas.text.js" type="text/javascript">
+		</script>
+		<script src="/javascripts/faces/optimer-normal-normal.js" type="text/javascript">
+		</script>
+		<script src="/javascripts/plot_glucose.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/javascripts/plot_bp.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/javascripts/dime.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body id="jqt">
+		<form action="/lloyds/users/enter/0" id="user_login" class='current' >
+			<img id="logo" src="images/dime_logo.png"/>
+			<ul class="rounded">
+				<li>
+					<input type="email" name="user[email]" value="" placeholder="Email"/>
+				</li>
+				<li>
+					<input type="password" name="user[password]" value="" placeholder="Password"/>
+				</li>
+				<div id="submitbutton" class="whiteButton submit">
+					Login
+				</div>
+			</ul>
+		</form>
+		<div id="badges">
+			<div class="profile">
+				<div class="portrait">
+					&nbsp;
+				</div>
+				<dl>
+					<dt>Email </dt> <dd class='email'> Jin.hu </dd>
+					<dt> Naam </dt> <dd class='name'> 	Djinn </dd>
+					<dt> Leeftijd </dt> <dd class='age'> 35 </dd>
+					<dt>Dime2 </dt><dd class ='dime2'>  </dd>
+				</dl>
+			</div>
+			<div class="progress" id="progress_all">
+			<div class="progress" id="progress_current">
+				&nbsp;50%
+			</div>		
+			</div>
+				<div style="height:320px;">
+			
+				<div class="tile">
+					<div class="badge">
+						1
+					</div>
+					<div class="image" style="background-image: url(/images/tasks/bbr.png)">
+				</div>
+				</div>
+				<div class="tile">
+					<div class="badge">
+						1
+					</div>
+					<div class="image" style="background-image: url(/images/tasks/adherence.png)">
+					</div>
+				</div>
+				<div class="tile">
+					<div class="badge">
+						1
+					</div>
+					<div class="image" style="background-image: url(/images/tasks/goal.png)">
+					</div>
+				</div>
+				<div class="tile">
+					<div class="badge">
+						1
+					</div>
+					<div class="image" style="background-image: url(/images/tasks/risk.png)">
+					</div>
+				</div>
+				<div class="tile">
+					<div class="badge">
+						1
+					</div>
+					<div class="image" style="background-image: url(/images/tasks/profile.png)">
+					</div>
+				</div>
+				<div class="tile">
+					<div class="badge">
+						1
+					</div>
+					<div class="image" style="background-image: url(/images/tasks/qna.png)">
+					</div>
+				</div>
+				<div class="tile">
+					<div class="badge">
+						1
+					</div>
+					<div class="image" style="background-image: url(/images/tasks/map.png)">
+					</div>
+				</div>
+				<div class="tile">
+					<div class="badge">
+						1
+					</div>
+					<div class="image" style="background-image: url(/images/tasks/mtr.png)">
+					</div>
+				</div>
+				<div class="tile">
+					<div class="badge">
+						1
+					</div>
+					<div class="image" style="background-image: url(/images/tasks/bbr.png)">
+					</div>
+				</div>
+				<div class="tile">
+					<div class="badge">
+						1
+					</div>
+					<div class="image" style="background-image: url(/images/tasks/adherence.png)">
+					</div>
+				</div>
+				<div class="tile">
+					<div class="badge">
+						1
+					</div>
+					<div class="image" style="background-image: url(/images/tasks/map.png)">
+					</div>
+				</div>
+				<div class="tile">
+					<div class="badge">
+						1
+					</div>
+					<div class="image" style="background-image: url(/images/tasks/mtr.png)">
+					</div>
+				</div>
+			</div>
+			<div class="tabbar">
+				<span><img height="25" width="55" src='/images/profile.png'/></span>
+				<a class="tab dissolve" href="#daily_progress"><img height="25"  width="55" src='/images/bbr.png'/></a>
+				<a class="tab dissolve" href="#blood_sugar"> <img height="25" width="55" src='/images/map.png'/></a>
+				<a class="tab dissolve" href="#blood_presure"> <img height="25" width="55" src='/images/consult.png'/></a>
+				<a class="tab dissolve" href="#cholesterol"><img height="25" width="55" src='/images/mtr.png'/></a>
+			</div>
+		</div>
+		<form id="daily_progress">
+			<div class="profile">
+				<div class="portrait">
+					&nbsp;
+				</div>
+				<dl>
+					<dt>
+						Email
+					</dt>
+					<dd>
+						Jin.hu
+					</dd>
+					<dt>
+						Naam
+					</dt>
+					<dd>
+						Djinn
+					</dd>
+					<dt>
+						Leeftijd
+					</dt>
+					<dd>
+						35
+					</dd>
+					<dt>
+						volledigheid
+					</dt>
+					<dd>
+						30
+					</dd>
+				</dl>
+			</div>
+			<div style="height:320px;">
+				<div id='progress'>
+					progress
+				</div>
+				<ul class="checklist">
+					<li><input name="water" type='checkbox'><span>Drank &lt; 5 glass water</span></li>
+					<li><input name="salt"  type='checkbox'><span> &lt; 3 spoon salt</span></li>
+					<li><input name="sugar" type='checkbox'><span>&lt; 30 mg Sugar</span></li>
+					<li><input name="sport" type='checkbox'><span>Sport for 30 minutes</span></li>
+					<li><input name="custom" type='text'/></li>
 
+				</ul>
+				<div id="submitbutton" class="whiteButton submit">
+					Save
+				</div>
+			</div>
+			<div class="tabbar">
+				<a class="tab dissolve" href="#badges"><img height="25" width="55" src='/images/profile.png'/></a>
+				<span><img height="25"  width="55" src='/images/bbr.png'/></span>
+				<a class="tab dissolve" href="#blood_sugar"> <img height="25" width="55" src='/images/map.png'/></a>
+				<a class="tab dissolve" href="#blood_presure"> <img height="25" width="55" src='/images/consult.png'/></a>
+				<a class="tab dissolve" href="#cholesterol"><img height="25" width="55" src='/images/mtr.png'/></a>
+			</div>
+		</form>
+		<div id="blood_sugar">
+			<div class="profile">
+				<div class="portrait">
+					&nbsp;
+				</div>
+				<dl>
+					<dt>
+						Email
+					</dt>
+					<dd>
+						Jin.hu
+					</dd>
+					<dt>
+						Naam
+					</dt>
+					<dd>
+						Djinn
+					</dd>
+					<dt>
+						Leeftijd
+					</dt>
+					<dd>
+						35
+					</dd>
+					<dt>
+						volledigheid
+					</dt>
+					<dd>
+						30
+					</dd>
+				</dl>
+			</div>
+				<canvas id="sugarGraph" height="300px" width="300px">
+					Your browser does not support canvas drawings.
+				</canvas>
+			<div class="tabbar">
+				<a class="tab dissolve" href="#blood_sugar"><img height="25" width="55" src='/images/profile.png'/></a>
+				<a class="tab dissolve" href="#daily_progress"><img height="25"  width="55" src='/images/bbr.png'/></a>
+				<span><img height="25" width="55" src='/images/map.png'/></span>
+				<a class="tab dissolve" href="#blood_presure"> <img height="25" width="55" src='/images/consult.png'/></a>
+				<a class="tab dissolve" href="#cholesterol"><img height="25" width="55" src='/images/mtr.png'/></a>
+			</div>
+		</div>
+		<div id="blood_presure">
+			<div class='toolbar'>
+				<h1>Overzicht</h1>
+				<a class='back' href='#'>terug</a>
+			</div>
+			<div class="profile">
+				<div class="portrait">
+					&nbsp;
+				</div>
+				<dl>
+					<dt>
+						Email
+					</dt>
+					<dd>
+						Jin.hu
+					</dd>
+					<dt>
+						Naam
+					</dt>
+					<dd>
+						Djinn
+					</dd>
+					<dt>
+						Leeftijd
+					</dt>
+					<dd>
+						35
+					</dd>
+					<dt>
+						volledigheid
+					</dt>
+					<dd>
+						30
+					</dd>
+				</dl>
+			</div>
+				<canvas id="bpGraph" height="300px" width="300px">
+					Your browser does not support canvas drawings.
+				</canvas>
+			<div class="tabbar">
+				<a class="tab dissolve" href="#blood_sugar"><img height="25" width="55" src='/images/profile.png'/></a>
+				<a class="tab dissolve" href="#daily_progress"><img height="25"  width="55" src='/images/bbr.png'/></a>
+				<a class="tab dissolve" href="#blood_sugar"> <img height="25" width="55" src='/images/map.png'/></a>
+				<span><img height="25" width="55" src='/images/consult.png'/></span>
+				<a class="tab dissolve" href="#cholesterol"><img height="25" width="55" src='/images/mtr.png'/></a>
+			</div>
 
-      #page {
-        background-color: #f0f0f0;
-        width: 750px;
-        margin: 0;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      #content {
-        float: left;
-        background-color: white;
-        border: 3px solid #aaa;
-        border-top: none;
-        padding: 25px;
-        width: 500px;
-      }
-
-      #sidebar {
-        float: right;
-        width: 175px;
-      }
-
-      #footer {
-        clear: both;
-      }
-
-
-      #header, #about, #getting-started {
-        padding-left: 75px;
-        padding-right: 30px;
-      }
-
-
-      #header {
-        background-image: url("images/rails.png");
-        background-repeat: no-repeat;
-        background-position: top left;
-        height: 64px;
-      }
-      #header h1, #header h2 {margin: 0}
-      #header h2 {
-        color: #888;
-        font-weight: normal;
-        font-size: 16px;
-      }
-
-
-      #about h3 {
-        margin: 0;
-        margin-bottom: 10px;
-        font-size: 14px;
-      }
-
-      #about-content {
-        background-color: #ffd;
-        border: 1px solid #fc0;
-        margin-left: -55px;
-        margin-right: -10px;
-      }
-      #about-content table {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-size: 11px;
-        border-collapse: collapse;
-      }
-      #about-content td {
-        padding: 10px;
-        padding-top: 3px;
-        padding-bottom: 3px;
-      }
-      #about-content td.name  {color: #555}
-      #about-content td.value {color: #000}
-
-      #about-content ul {
-        padding: 0;
-        list-style-type: none;
-      }
-
-      #about-content.failure {
-        background-color: #fcc;
-        border: 1px solid #f00;
-      }
-      #about-content.failure p {
-        margin: 0;
-        padding: 10px;
-      }
-
-
-      #getting-started {
-        border-top: 1px solid #ccc;
-        margin-top: 25px;
-        padding-top: 15px;
-      }
-      #getting-started h1 {
-        margin: 0;
-        font-size: 20px;
-      }
-      #getting-started h2 {
-        margin: 0;
-        font-size: 14px;
-        font-weight: normal;
-        color: #333;
-        margin-bottom: 25px;
-      }
-      #getting-started ol {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #getting-started li {
-        font-size: 18px;
-        color: #888;
-        margin-bottom: 25px;
-      }
-      #getting-started li h2 {
-        margin: 0;
-        font-weight: normal;
-        font-size: 18px;
-        color: #333;
-      }
-      #getting-started li p {
-        color: #555;
-        font-size: 13px;
-      }
-
-
-      #sidebar ul {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #sidebar ul h3 {
-        margin-top: 25px;
-        font-size: 16px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #ccc;
-      }
-      #sidebar li {
-        list-style-type: none;
-      }
-      #sidebar ul.links li {
-        margin-bottom: 5px;
-      }
-
-    </style>
-    <script type="text/javascript">
-      function about() {
-        info = document.getElementById('about-content');
-        if (window.XMLHttpRequest)
-          { xhr = new XMLHttpRequest(); }
-        else
-          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
-        xhr.open("GET","rails/info/properties",false);
-        xhr.send("");
-        info.innerHTML = xhr.responseText;
-        info.style.display = 'block'
-      }
-    </script>
-  </head>
-  <body>
-    <div id="page">
-      <div id="sidebar">
-        <ul id="sidebar-items">
-          <li>
-            <h3>Browse the documentation</h3>
-            <ul class="links">
-              <li><a href="http://api.rubyonrails.org/">Rails API</a></li>
-              <li><a href="http://stdlib.rubyonrails.org/">Ruby standard library</a></li>
-              <li><a href="http://corelib.rubyonrails.org/">Ruby core</a></li>
-              <li><a href="http://guides.rubyonrails.org/">Rails Guides</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-
-      <div id="content">
-        <div id="header">
-          <h1>Welcome aboard</h1>
-          <h2>You&rsquo;re riding Ruby on Rails!</h2>
-        </div>
-
-        <div id="about">
-          <h3><a href="rails/info/properties" onclick="about(); return false">About your application&rsquo;s environment</a></h3>
-          <div id="about-content" style="display: none"></div>
-        </div>
-
-        <div id="getting-started">
-          <h1>Getting started</h1>
-          <h2>Here&rsquo;s how to get rolling:</h2>
-
-          <ol>
-            <li>
-              <h2>Use <code>rails generate</code> to create your models and controllers</h2>
-              <p>To see all available options, run it without parameters.</p>
-            </li>
-
-            <li>
-              <h2>Set up a default route and remove or rename this file</h2>
-              <p>Routes are set up in config/routes.rb.</p>
-            </li>
-
-            <li>
-              <h2>Create your database</h2>
-              <p>Run <code>rake db:migrate</code> to create your database. If you're not using SQLite (the default), edit <code>config/database.yml</code> with your username and password.</p>
-            </li>
-          </ol>
-        </div>
-      </div>
-
-      <div id="footer">&nbsp;</div>
-    </div>
-  </body>
+		</div>
+		<div id="cholesterol">
+			<div class="profile">
+				<div class="portrait">
+					&nbsp;
+				</div>
+				<dl>
+					<dt>
+						Email
+					</dt>
+					<dd>
+						Jin.hu
+					</dd>
+					<dt>
+						Naam
+					</dt>
+					<dd>
+						Djinn
+					</dd>
+					<dt>
+						Leeftijd
+					</dt>
+					<dd>
+						35
+					</dd>
+					<dt>
+						volledigheid
+					</dt>
+					<dd>
+						30
+					</dd>
+				</dl>
+			</div>
+				<canvas id="dlGraph" height="300px" width="300px">
+					Your browser does not support canvas drawings.
+				</canvas>
+			<div class="tabbar">
+				<a class="tab dissolve" href="#blood_sugar"><img height="25" width="55" src='/images/profile.png'/></a>
+				<a class="tab dissolve" href="#daily_progress"><img height="25"  width="55" src='/images/bbr.png'/></a>
+				<a class="tab dissolve" href="#blood_sugar"> <img height="25" width="55" src='/images/map.png'/></a>
+				<a class="tab dissolve" href="#cholesterol"><img height="25" width="55" src='/images/consult.png'/></a>
+				<span><img height="25" width="55" src='/images/mtr.png'/></span>
+			</div>
+		</div>
+	</body>
 </html>

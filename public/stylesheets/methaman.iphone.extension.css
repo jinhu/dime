@@ -1,0 +1,364 @@
+/* when not set to body, it kinda screws up the "arrows"
+   no solution yet */
+canvas {
+	border-radius: 8px;
+	margin-left: 7px;
+	margin-top: 5px;
+	margin-bottom: 0px;
+}
+.speech-container{
+	background-color: #dbe1ed;
+}
+
+.speech-right {
+	font-size: 17px;
+	font-color: black;
+	font-weight: 600;
+	letter-spacing: -1px;
+	font-family: "Helvetica";
+	position: relative;
+	width: 191px;
+	padding: 7px;
+	margin: 4px;
+	
+	-webkit-border-top-left-radius: 16px;
+	-webkit-border-top-right-radius: 16px;
+	-webkit-border-bottom-right-radius: 16px;
+	-webkit-box-shadow: 3px 5px 5px #888;	
+	
+	background: -webkit-gradient(linear, left top, left bottom, from(#d5edd1), to(#b2ef51), color-stop(0.06, #92d841), color-stop(0.94, #92d841));
+	border: 1px #87a976 solid;
+}
+
+.speech-left {
+	font-size: 17px;
+	font-color: black;
+	font-weight: 600;
+	letter-spacing: -1px;
+	font-family: "Helvetica";
+	position: relative;
+	width: 191px;
+	padding: 7px;
+	margin: 4px;
+
+	-webkit-border-top-left-radius: 16px;
+	-webkit-border-top-right-radius: 16px;
+	-webkit-border-bottom-left-radius: 16px;
+	-webkit-box-shadow: 3px 5px 5px #888;
+	
+	background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#bebebe), color-stop(0.06, #dedede), color-stop(0.94, #dedede));
+	border: 1px #8e8e8e solid;
+}
+
+.caption-time {
+	text-align: center;
+	font-size: 12px;
+	color: rgba(76, 86, 108, 1);
+	font-weight: 600;
+	letter-spacing: -1px;
+	font-family: "Helvetica";
+	margin: 0px;
+}
+
+.messagecontainer {
+	background-color: #ddd;
+	border-top: 1px white solid;
+	border-bottom: 1px #383c45 solid;
+	height: 39px;
+	position: relative;
+}
+
+.messagecontainer .send {
+	background: -webkit-gradient(linear, left top, left bottom,
+		color-stop(0, rgb(122,165,229)),
+		color-stop(0.5, rgb(92,144,221)),
+		color-stop(0.51, rgb(31,101,206)),
+		color-stop(1, rgb(30,98,201)));
+	border: 1px #1550a9 solid;
+	-webkit-border-radius: 12px;
+	bottom: 7px;
+	color: #fff;
+	float: left;
+	font-weight: bold;
+	height: 21px;
+	padding-left: 8px;
+	padding-top: 3px;
+	position: absolute;
+	right: 6px;
+	width: 51px;
+}
+
+.messagecontainer .message {
+	background-color: #fff;
+	border: 1px #888 solid;
+	-webkit-border-radius: 12px;
+	float: left;
+	font-size: 16px;
+	height: 22px;
+	margin: 6px;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-top: 2px;
+	resize: none;
+	width: 224px;
+}
+
+.trafficlight {
+	right: 10px;
+	/*position: absolute;*/
+	height: 32px;
+	width: 25px;
+	padding-top: 2px;
+	padding-left: 9px;
+	font-family: Arial black;
+	font-weight: bolder;
+	color: #fff;
+	font-size: 20px;
+	margin: 3px;
+	-webkit-border-radius: 17px;
+}
+
+
+.red{
+	background: -webkit-gradient(radial, 40% 40%, 5, 50% 50%, 17,
+		from(hsl(5,100%,37%)),
+		color-stop(30%,hsl(5,100%,30%)),
+		color-stop(50%,hsl(5,100%,20%)),
+		color-stop(80%,hsl(5,100%,15%)),
+		to(hsl(5,100%,0%)));
+}
+.red.on{
+	background: -webkit-gradient(radial, 40% 40%, 5, 50% 50%, 17,
+		from(hsl(5,100%,80%)),
+		color-stop(30%,hsl(5,100%,68%)),
+		color-stop(50%,hsl(5,100%,57%)),
+		color-stop(80%,hsl(5,100%,30%)),
+		to(hsl(5,100%,0%)));
+	-webkit-box-shadow: 0px 0px 20px 1px hsl(5,100%,90%);
+}
+
+
+.yellow {
+	background: -webkit-gradient(radial, 40% 40%, 5, 50% 50%, 17,
+		from(hsl(44, 100%,37%)),
+		color-stop(30%,hsl(44, 100%,30%)),
+		color-stop(50%,hsl(44, 100%,20%)),
+		color-stop(80%,hsl(44, 100%,15%)),
+		to(hsl(44,100%,0%)));
+}
+.yellow.on{
+	background: -webkit-gradient(radial, 40% 40%, 5, 50% 50%, 17,
+		from(hsl(44, 100%,85%)),
+		color-stop(30%,hsl(44, 100%,75%)),
+		color-stop(50%,hsl(44, 100%,60%)),
+		color-stop(80%,hsl(44, 100%,30%)),
+		to(hsl(44,100%,0%)));
+	-webkit-box-shadow: 0px 0px 20px 1px hsl(44, 100%,90%);
+}
+
+
+.green {
+	background: -webkit-gradient(radial, 40% 40%, 5, 50% 50%, 17,
+		from(hsl(153, 100%,37%)),
+		color-stop(30%,hsl(153, 100%,30%)),
+		color-stop(50%,hsl(153, 100%,20%)),
+		color-stop(80%,hsl(153, 100%,15%)),
+		to(hsl(153, 100%,0%)));
+}
+.green.on{
+	background: -webkit-gradient(radial, 42% 42%, 5, 50% 50%, 17,
+		from(hsl(153, 100%, 90%)),
+		color-stop(5%,hsl(153, 100%, 75%)),
+		color-stop(15%,hsl(153, 100%,60%)),
+		color-stop(80%,hsl(153, 100%,30%)),
+		to(hsl(153, 100%,0%)));
+	-webkit-box-shadow: 0px 0px 20px 1px hsl(153, 100%,90%);
+}
+
+/*risk bubbles*/
+		.circle {
+			position: absolute;
+			width: 140px;
+			height: 80px;
+			top: 0px;
+			padding-top: 60px;
+			-webkit-border-radius: 70px;
+			background-color: green;
+			text-align: center;
+			font-size: 20px;
+			background: -webkit-gradient(radial, 60 60, 30, 72 70, 56, from(#A7D30C), to(rgba(1,159,98,0)), color-stop(90%, #019F62));
+
+			-webkit-transform-style: preserve-3d;
+			-webkit-transition-property: -webkit-transform;
+	  		-webkit-transition-timing-function: ease-out;
+			-webkit-transition-duration: 0.4s;
+		}
+
+		@-webkit-keyframes woosh {
+			0% {
+				-webkit-transform: translateX(-20px) translateZ(-600px);
+			}
+			100% {
+				-webkit-transform: translateX(20px) translateZ(-600px);
+			}
+		}
+
+		containtercontainter {
+			background-color: black;
+			-webkit-perspective: 500;
+			-webkit-transform-style: preserve-3d;
+			background: -webkit-gradient(linear, left top, left bottom, from(#3C71A5), to(#78909A), color-stop(0.6, #A8B0DA));
+		}
+		.containter {
+			width: 320px;
+			height: 460px;
+			background-color: #78909A;
+			-webkit-transform-style: preserve-3d;
+			-webkit-transform: translateZ(-1600px);
+
+			-webkit-animation-name: woosh;
+			-webkit-animation-timing-function: cubic-bezier(0.6, 0.2, 0.4, 0.8);
+			-webkit-animation-duration: 4s;
+			-webkit-animation-iteration-count: 100;
+			-webkit-animation-direction: alternate;
+		}
+		.leftwall {
+			position:absolute;
+
+			width: 600px;
+			height: 460px;
+			background: -webkit-gradient(linear, left top, right top, from(#3C71A5), to(#78909A), color-stop(0.6, #A8B0DA));
+			-webkit-transform: translateX(-300px) translateZ(300px) rotateY(90deg);
+		}
+		.rightwall {
+			position:absolute;
+
+			width: 600px;
+			height: 460px;
+
+			background: -webkit-gradient(linear, right top, left top, from(#3C71A5), to(#78909A), color-stop(0.6, #A8B0DA));
+
+			-webkit-transform: translateX(20px) translateZ(300px) rotateY(-90deg);
+		}
+		.ceiling {
+			position:absolute;
+
+			width: 320px;
+			height: 600px;
+
+			background: -webkit-gradient(linear, left top, left bottom, from(#3C71A5), to(#78909A), color-stop(0.6, #A8B0DA));
+
+			-webkit-transform: translateY(-300px) translateZ(300px) rotateX(-90deg);
+		}
+		.floor {
+			position:absolute;
+
+			width: 320px;
+			height: 600px;
+
+			background: -webkit-gradient(linear, left bottom, left top, from(#3C71A5), to(#78909A), color-stop(0.6, #A8B0DA));
+
+			-webkit-transform: translateY(160px) translateZ(300px) rotateX(90deg);
+		}
+		.infoboxlayer {
+			position: absolute;
+			display: none;
+
+			top: 10px;
+			left: 0px;
+			width: 225px;
+			height: 150px;
+			margin: 5px;
+
+			border: 2px black solid;
+			-webkit-border-radius: 8px;
+
+			background-color: white;
+
+			opacity: 1.0;
+
+			-webkit-transition-property: opacity;
+	  		-webkit-transition-timing-function: ease-out;
+			-webkit-transition-duration: 0.4s;
+		}
+		.infoboxtext {
+			position: absolute;
+			display: none;
+
+			top: 0px;
+			left: 0px;
+			width: 260px;
+			height: 225px;
+			margin: 15px;
+
+			opacity: 1.0;
+
+			-webkit-transition-property: opacity;
+	  		-webkit-transition-timing-function: ease-out;
+			-webkit-transition-duration: 0.4s;
+		}
+		/* PILLBOX */
+div.medbox {
+	width: 320px;
+	height: 400px;
+	margin: 0px;
+	padding: 0px;
+	border: 0px black solid;
+}
+
+/* HEADER */
+div.medbox div.header {
+	float:left;
+	width: 320px;
+	height: 20px;
+}
+div.medbox div.header div:first-child {
+	width: 34px;
+}
+div.medbox div.header div {
+	float: left;
+	width: 64px;
+	height: 18px;
+	background-color: #fff;
+	padding-left: 4px;
+	-webkit-border-radius: 8px;
+	margin: 1px;
+}
+/* HEADER end */
+
+/* DAYS */
+div.medbox div.days {
+	float:left;
+	width: 40px;
+	height: 380px;
+}
+div.medbox div.days div {
+	float: left;
+	width: 34px;
+	height: 52px;
+	background-color: #fff;
+	padding-left: 4px;
+	-webkit-border-radius: 8px;
+	margin: 1px;
+	v-align: center;
+}
+/* HEADER end*/
+
+/* DOSES */
+div.medbox div.doses {
+	float:left;
+	width: 280px;
+	height: 380px;
+	-webkit-transform-style: preserve-3d;
+}
+div.medbox div.doses div {
+	float:left;
+	height: 52px;
+	width: 68px;
+	-webkit-border-radius: 8px;
+	margin: 1px;
+	background: url(/images/pill_landscape.png) no-repeat #fff;
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: -webkit-transform 1s;
+}
+/* DOSES end */

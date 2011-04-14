@@ -1,0 +1,164 @@
+--- 
+schema_migrations: 
+  version: 
+    default: 
+    type: string
+    "null": false
+posts: 
+  id: 
+    default: 
+    type: primary_key
+    "null": 
+  title: 
+    default: 
+    type: string
+    "null": 
+  content: 
+    default: 
+    type: text
+    "null": 
+  created_at: 
+    default: 
+    type: datetime
+    "null": 
+  updated_at: 
+    default: 
+    type: datetime
+    "null": 
+users: 
+  id: 
+    default: 
+    type: primary_key
+    "null": 
+  email: 
+    default: 
+    type: string
+    "null": 
+  password: 
+    default: 
+    type: string
+    "null": 
+  name: 
+    default: 
+    type: string
+    "null": 
+  created_at: 
+    default: 
+    type: datetime
+    "null": 
+  updated_at: 
+    default: 
+    type: datetime
+    "null": 
+profiles: 
+  id: 
+    default: 
+    type: primary_key
+    "null": 
+  user_id: 
+    default: 
+    type: integer
+    "null": 
+  name: 
+    default: 
+    type: string
+    "null": 
+  image: 
+    default: 
+    type: string
+    "null": 
+  game_id: 
+    default: 
+    type: integer
+    "null": 
+  created_at: 
+    default: 
+    type: datetime
+    "null": 
+  updated_at: 
+    default: 
+    type: datetime
+    "null": 
+games: 
+  id: 
+    default: 
+    type: primary_key
+    "null": 
+  gerne: 
+    default: 
+    type: string
+    "null": 
+  name: 
+    default: 
+    type: string
+    "null": 
+  image: 
+    default: 
+    type: string
+    "null": 
+  version: 
+    default: 
+    type: string
+    "null": 
+  created_at: 
+    default: 
+    type: datetime
+    "null": 
+  updated_at: 
+    default: 
+    type: datetime
+    "null": 
+ranks: 
+  id: 
+    default: 
+    type: primary_key
+    "null": 
+  game_id: 
+    default: 
+    type: integer
+    "null": 
+  user_id: 
+    default: 
+    type: integer
+    "null": 
+  score: 
+    default: 
+    type: integer
+    "null": 
+  time: 
+    default: 
+    type: integer
+    "null": 
+  created_at: 
+    default: 
+    type: datetime
+    "null": 
+  updated_at: 
+    default: 
+    type: datetime
+    "null": 
+badges: 
+  id: 
+    default: 
+    type: primary_key
+    "null": 
+  game_id: 
+    default: 
+    type: integer
+    "null": 
+  name: 
+    default: 
+    type: string
+    "null": 
+  image: 
+    default: 
+    type: string
+    "null": 
+  created_at: 
+    default: 
+    type: datetime
+    "null": 
+  updated_at: 
+    default: 
+    type: datetime
+    "null": 

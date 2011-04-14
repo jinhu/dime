@@ -1,0 +1,8 @@
+Rails.application.config.middleware.use OmniAuth::Builder do
+  provider :twitter, 'bYNsi8UTbE6a2Kz8YYaUyg', 'I8tWrKMfDxoN4uGQ3QwS0g8ebMJ7MAosG0rFSBSg'
+  provider :facebook, '193944617309917', '5e8a43258c0075d5f9329be3275dd82c', :cookie=>true
+#  provider :google, 'bYNsi8UTbE6a2Kz8YYaUyg', 'I8tWrKMfDxoN4uGQ3QwS0g8ebMJ7MAosG0rFSBSg'
+#  provider :yahoo, 'bYNsi8UTbE6a2Kz8YYaUyg', 'I8tWrKMfDxoN4uGQ3QwS0g8ebMJ7MAosG0rFSBSg'
+#  provider :openid,  OpenID::Store::Filesystem.new('/tmp')
+#  provider :google_apps, OpenID::Store::Filesystem.new('/tmp')
+end

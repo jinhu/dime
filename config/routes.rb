@@ -1,4 +1,16 @@
-Dime2rescue::Application.routes.draw do
+AppName::Application.routes.draw do
+  resources :badges
+
+  resources :ranks
+
+  resources :games
+
+  resources :profiles
+
+  resources :users
+
+  resources :posts
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

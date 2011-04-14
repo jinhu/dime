@@ -1,0 +1,5 @@
+--- 
+indexes: 
+  - kind: schema_migrations
+    properties: 
+      - name: version

@@ -1,0 +1,27 @@
+.adherence_table, .adherence-table{
+	table-layout: fixed;
+	font-weight:bold;
+width: 60%;	
+}
+
+.adherence_good, .adherence-good{
+border:solid 1px;
+height:40px;
+padding:2px;
+background: #33CC00;
+
+}
+
+.adherence_bad, .adherence-bad{
+border:solid 1px;
+height:40px;
+padding:2px;
+background: #F62817;
+
+}
+
+.adherence_header, .adherence-header{
+border:solid 1px;
+height:40px;
+padding:2px;
+}
